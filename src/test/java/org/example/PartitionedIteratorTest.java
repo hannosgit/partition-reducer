@@ -42,11 +42,11 @@ class PartitionedIteratorTest {
         return new TestRecord(aLong, "foo", 23);
     }
 
-    private static Function<List<TestRecord>, TestRecord> getListTestRecordFunction() {
+    public static Function<List<TestRecord>, TestRecord> getListTestRecordFunction() {
         return objects -> objects.stream().findFirst().orElse(null);
     }
 
-    private record TestRecord(long aLong, String aText, int anInt) {
+    public record TestRecord(long aLong, String aText, int anInt) {
     }
 
 
